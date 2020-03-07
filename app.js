@@ -6,7 +6,7 @@ const con = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: 'Mysql27!',
-    database: 'join_us',
+    database: 'brew_map',
   });
 
   
@@ -35,6 +35,17 @@ app.get('/newlevel', function(req, res){
     res.render('newLevel')
 })
 
+// app.get('/', function(req, res){
+//   const q = "SELECT COUNT(*) AS count FROM brews";
+//   con.query(q, function(err, results){
+//     if (err) throw err;
+//     const count = results[0].count;
+//     res.send('We have ' + count + ' users in our db');
+//   });
+// });
+
+
+
 app.use(express.static(process.env.PWD + '/public'));
 
 const PORT = process.env.PORT || 3000;   
@@ -44,6 +55,6 @@ app.listen(PORT, function(){
 })
 
 
-con.end();
+// con.end();
 
 
