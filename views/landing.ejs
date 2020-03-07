@@ -24,12 +24,12 @@
         position: absolute;
         z-index: 1000;
         background: rgba(255, 255, 255, 0.7);
-        padding: 10px;
+        padding: 30px;
         margin: 10px;
         right: 0;
         border-radius: 10px;
         box-shadow: 1px 1px 1px grey;
-        min-height: 300px;
+        min-height: 400px;
         background-color: rgb(121, 137, 189);
     }
     
@@ -54,8 +54,47 @@
 </head>
 <body>
     <div id="overlay">
-        <h2>Brew Map</h2>
-        <input type="button" class="btn btn-lg btn-success" onclick="location.href='/info';" value="Beer Page" />
+        <h2><u>Brew Map</u></h2>
+        <!-- <input type="button" class="btn btn-success" onclick="location.href='/info';" value="Beer Page" /> -->
+        <div>
+            <p>
+               To add a new Brewery: <br>
+               <ul>
+                   <li>Click on the map for the location</li>
+                   <li>Type the name of the Brewery</li>
+                   <li>Submit a rating out of 10</li>
+               </ul>
+
+            </p>
+            </div>
+            <form>
+                <div class="form-group">
+                    <label for="input">Name of Brewery</label>
+                    <input type="email" class="form-control" id="input" placeholder="Brewery">
+                  </div>
+            <!-- <br>
+          <input type="number" id="quantity" name="quantity" min="0" max="10" placeholder="Rating"/>
+                <br> -->
+                <div class="form-group">
+                <label for="select">Rating</label>
+                <select class="form-control" id="select">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                     <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                 </select>
+                  </div>
+                <br>
+            <input type="button" class="btn btn-lg btn-success" value="Submit"/>
+            </form>
+        
+
     </div>
     <div id="map"></div>
 
@@ -90,6 +129,18 @@ L.marker([50.992933, -114.065466], {icon: beerIcon}).addTo(map).bindPopup(newLev
 L.marker([51.009482, -114.034921], {icon: beerIcon}).addTo(map).bindPopup('<p class="title">Village Brewery</p>' + village);
 L.marker([51.04308, -114.079928], {icon: beerIcon}).addTo(map).bindPopup(innerCity + village);
 
+
+
+var popup = L.popup();
+
+function onMapClick(e) {
+	popup
+		.setLatLng(e.latlng)
+		.setContent("You clicked the map at " + e.latlng.toString())
+		.openOn(map);
+}
+
+map.on('click', onMapClick);
 
     </script>
 
