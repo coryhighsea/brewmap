@@ -72,9 +72,7 @@
                     <label for="input">Name of Brewery</label>
                     <input type="email" class="form-control" id="input" placeholder="Brewery">
                   </div>
-            <!-- <br>
-          <input type="number" id="quantity" name="quantity" min="0" max="10" placeholder="Rating"/>
-                <br> -->
+            
                 <div class="form-group">
                 <label for="select">Rating</label>
                 <select class="form-control" id="select">
@@ -84,7 +82,7 @@
                     <option>4</option>
                     <option>5</option>
                     <option>6</option>
-                     <option>7</option>
+                    <option>7</option>
                     <option>8</option>
                     <option>9</option>
                     <option>10</option>
@@ -99,7 +97,7 @@
     <div id="map"></div>
 
     <script>
-    var map = L.map('map').setView([51, -114], 11);
+    var map = L.map('map').setView([49.88, -119.46], 12);
 
 L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
     maxZoom: 18,
@@ -124,10 +122,10 @@ const village = '<span class="fa fa-star checked"></span><span class="fa fa-star
 // <input type="button" class="btn btn-lg btn-success" onclick="location.href='/';" value="Brew Map" />
 const newLevel = '<p class="title">New Level Brewing</p> <button class="btn btn-warning"><a id="anchor" href="/newLevel">More Info</a></button>'
 
-L.marker([51.03962, -114.036627], {icon: beerIcon}).addTo(map).bindPopup('<p class="title">Cold Garden</p><img width="250px" src="coldgarden.jpg">');
-L.marker([50.992933, -114.065466], {icon: beerIcon}).addTo(map).bindPopup(newLevel);
-L.marker([51.009482, -114.034921], {icon: beerIcon}).addTo(map).bindPopup('<p class="title">Village Brewery</p>' + village);
-L.marker([51.04308, -114.079928], {icon: beerIcon}).addTo(map).bindPopup(innerCity + village);
+// L.marker([51.03962, -114.036627], {icon: beerIcon}).addTo(map).bindPopup('<p class="title">Cold Garden</p><img width="250px" src="coldgarden.jpg">');
+// L.marker([50.992933, -114.065466], {icon: beerIcon}).addTo(map).bindPopup(newLevel);
+// L.marker([51.009482, -114.034921], {icon: beerIcon}).addTo(map).bindPopup('<p class="title">Village Brewery</p>' + village);
+// L.marker([51.04308, -114.079928], {icon: beerIcon}).addTo(map).bindPopup(innerCity + village);
 
 
 
@@ -146,11 +144,11 @@ map.on('click', onMapClick);
 
     
 </body>
+<!-- <span class="fa fa-star checked"></span>
 <span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
 <span class="fa fa-star"></span>
 <span class="fa fa-star"></span>
-<span class="fa fa-star"></span>
+<span class="fa fa-star"></span> -->
 
 
 

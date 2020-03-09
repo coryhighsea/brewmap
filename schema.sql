@@ -8,4 +8,4 @@ CREATE TABLE brews (
 )
 
 INSERT INTO brews(Brewery_name, rating, lat, lng) VALUES
-('Kettle River', 10, 49.896293, -119.487);
+('Craft Beer Market', 9, 50.12565, -118.6524);
