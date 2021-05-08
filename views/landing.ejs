@@ -62,7 +62,9 @@
                <ul>
                    <li>Click on the map for the location</li>
                    <li>Type the name of the Brewery</li>
-                   <li>Submit a rating out of 10</li>
+                   <li>Select a rating out of 10</li>
+                   <li>Click Submit</li>
+
                </ul>
 
             </p>
@@ -122,10 +124,11 @@ const village = '<span class="fa fa-star checked"></span><span class="fa fa-star
 // <input type="button" class="btn btn-lg btn-success" onclick="location.href='/';" value="Brew Map" />
 const newLevel = '<p class="title">New Level Brewing</p> <button class="btn btn-warning"><a id="anchor" href="/newLevel">More Info</a></button>'
 
-// L.marker([51.03962, -114.036627], {icon: beerIcon}).addTo(map).bindPopup('<p class="title">Cold Garden</p><img width="250px" src="coldgarden.jpg">');
-// L.marker([50.992933, -114.065466], {icon: beerIcon}).addTo(map).bindPopup(newLevel);
-// L.marker([51.009482, -114.034921], {icon: beerIcon}).addTo(map).bindPopup('<p class="title">Village Brewery</p>' + village);
-// L.marker([51.04308, -114.079928], {icon: beerIcon}).addTo(map).bindPopup(innerCity + village);
+L.marker([51.03962, -114.036627], {icon: beerIcon}).addTo(map).bindPopup('<p class="title">Cold Garden</p><img width="250px" src="coldgarden.jpg">');
+L.marker([50.992933, -114.065466], {icon: beerIcon}).addTo(map).bindPopup(newLevel);
+L.marker([51.009482, -114.034921], {icon: beerIcon}).addTo(map).bindPopup('<p class="title">Village Brewery</p>' + village);
+L.marker([51.04308, -114.079928], {icon: beerIcon}).addTo(map).bindPopup(innerCity + village);
+L.marker([49.896334, -119.487203], {icon: beerIcon}).addTo(map).bindPopup('<p class="title">Kettle River Brewery</p><img width="250px" src="kettle.jpg">');
 
 
 
@@ -144,11 +147,7 @@ map.on('click', onMapClick);
 
     
 </body>
-<!-- <span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star"></span>
-<span class="fa fa-star"></span>
-<span class="fa fa-star"></span> -->
+
 
 
 
